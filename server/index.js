@@ -5,7 +5,7 @@ const compression = require('compression');
 const db = require('../database/index.js');
 
 const app = express();
-const PORT = 3004;
+const PORT = 3000;
 
 app.use(morgan('dev'));
 app.use(compression());

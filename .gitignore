@@ -23,3 +23,6 @@ login.sh
 
 ## Database Config ##
 config.js
+
+## CSV Data ##
+database/csv
