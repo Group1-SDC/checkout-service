@@ -19,12 +19,9 @@ ITEMS="database/csv/items.csv"
 SCHEMA="$DIR/schema.sql"
 psql checkout < $SCHEMA
 
-# Run generate.js
-node database/generate.js
-
 # Import CSV files into db
-psql -d $DATABASE -c "\copy sizes FROM '$SIZES' CSV HEADER;"
+psql -d $DATABASE -c "\copy sizes (id, sizes) FROM '$SIZES' CSV HEADER;"
 
-psql -d $DATABASE -c "\copy colors FROM '$COLORS' CSV HEADER;"
+psql -d $DATABASE -c "\copy colors (id, color) FROM '$COLORS' CSV HEADER;"
 
-psql -d $DATABASE -c "\copy items FROM '$ITEMS' CSV HEADER;"
+psql -d $DATABASE -c "\copy items (id, category, name, base_price, current_price, primary_color, secondary_color, tertiary_color, heart, sizes) FROM '$ITEMS' CSV HEADER;"
