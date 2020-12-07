@@ -1,5 +1,5 @@
 -- In the service's root directory, 
-    -- run psql checkout < ./database/pg/schema.sql
+    -- $ npm run seedPG
 DROP DATABASE IF EXISTS checkout;
 
 CREATE DATABASE checkout;
@@ -32,3 +32,9 @@ CREATE TABLE items (
     heart BOOLEAN,
     sizes INTEGER REFERENCES sizes (id)
 );
+
+COPY sizes (id, sizes) FROM '/Users/AndrewSong/SDC/checkout-service/database/csv/sizes.csv' WITH (FORMAT csv, DELIMITER '|', HEADER);
+
+COPY colors (id, color) FROM '/Users/AndrewSong/SDC/checkout-service/database/csv/colors.csv' WITH (FORMAT csv, DELIMITER '|', HEADER);
+
+COPY items (id, category, name, base_price, current_price, primary_color, secondary_color, tertiary_color, heart, sizes) FROM '/Users/AndrewSong/SDC/checkout-service/database/csv/items.csv' WITH (FORMAT csv, DELIMITER '|', HEADER);
