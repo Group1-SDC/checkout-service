@@ -25,3 +25,5 @@ CREATE TABLE items (
     heart boolean,
     sizes list<varchar>
 );
+
+COPY items FROM '/Users/AndrewSong/SDC/checkout-service/database/csv/items_colors_sizes.csv' WITH DELIMITER='|' AND HEADER=TRUE;
