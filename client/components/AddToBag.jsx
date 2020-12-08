@@ -32,11 +32,18 @@ class AddToBag extends React.Component {
 
   getNewItem(itemId) {
     Axios.get(`/api/checkout/${itemId}`)
-      .then((res) => {
+      .then(({ data }) => {
+        const { rows } = data;
         this.setState({
-          item: res.data,
+          item: {
+            ...rows[0],
+            sizes: rows[0].sizes.split(' '),
+          },
         });
-      }).catch((err) => { console.error(err); });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 
   selectSize(e) {

@@ -3,8 +3,8 @@ const fs = require('fs');
 const faker = require('faker');
 
 const sizes = ['s m l', 'xs s m', 'l xl xxl', '10 11 12 14 16', '6 7 8 9 10 11 12'];
-const colors = ['orchid', 'silver', 'fuchsia', 'teal', 'sky blue', 'ivory', 'turquoise', 'pink', 'orange', 'olive', 'yellow', 'tan', 'green', 'violet', 'magenta',
-  'plum', 'gold', 'lavender', 'cyan', 'indigo', 'grey', 'salmon', 'blue', 'mint green', 'lime', 'azure', 'red', 'black', 'maroon', 'white', 'purple'];
+const colors = ['Orchid', 'Silver', 'Fuchsia', 'Teal', 'Sky Blue', 'Ivory', 'Turquoise', 'Pink', 'Orange', 'Olive', 'Yellow', 'Tan', 'Green', 'Violet', 'Magenta',
+  'Plum', 'Gold', 'Lavender', 'Cyan', 'Indigo', 'Grey', 'Salmon', 'Blue', 'Mint Green', 'Lime', 'Azure', 'Red', 'Black', 'Maroon', 'White', 'Purple'];
 const prices = [];
 const departments = [];
 const productNames = [];

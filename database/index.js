@@ -1,4 +1,14 @@
-const mongoose = require('mongoose');
+// Refactored PostgreSQL connection
+const { Pool } = require('pg');
+
+const checkout = new Pool({
+  database: 'checkout',
+});
+
+module.exports = checkout;
+
+// Inherited MongoDB connection
+/* const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/items', {
   useNewUrlParser: true,
@@ -17,4 +27,4 @@ const itemSchema = mongoose.Schema({
 
 const Item = mongoose.model('Item', itemSchema);
 
-module.exports.Item = Item;
+module.exports.Item = Item; */

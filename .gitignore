@@ -29,3 +29,6 @@ database/csv
 
 # Cassandra import texts
 import_*
+
+# Misc
+.DS_Store
