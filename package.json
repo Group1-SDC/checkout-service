@@ -15,7 +15,11 @@
     "start": "nodemon server/index.js ",
     "test": "jest --coverage",
     "build": "webpack -w",
-    "seed": "node seed.js"
+    "seed": "node seed.js",
+    "genPG": "node database/pg/generatePG.js",
+    "genCass": "node database/cass/generateCass.js",
+    "seedPG": "psql checkout < database/pg/schema.sql",
+    "seedCass": "cqlsh -f database/cass/schema.cql"
   },
   "dependencies": {
     "axios": "^0.21.0",

@@ -26,3 +26,6 @@ config.js
 
 ## CSV Data ##
 database/csv
+
+# Cassandra import texts
+import_*
