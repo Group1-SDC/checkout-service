@@ -14,7 +14,7 @@ USE checkout;
 DROP TABLE IF EXISTS checkout.items;
 
 CREATE TABLE items (
-    id int PRIMARY KEY,
+    id int,
     category varchar,
     name varchar,
     base_price varchar,
@@ -23,7 +23,8 @@ CREATE TABLE items (
     secondary_color varchar,
     tertiary_color varchar,
     heart boolean,
-    sizes list<varchar>
+    sizes list<varchar>,
+    PRIMARY KEY (id)
 );
 
 COPY items FROM '/Users/AndrewSong/SDC/checkout-service/database/csv/items_colors_sizes.csv' WITH DELIMITER='|' AND HEADER=TRUE;
