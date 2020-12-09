@@ -27,8 +27,11 @@ config.js
 ## CSV Data ##
 database/csv
 
-# Cassandra import texts
+## Cassandra import texts ##
 import_*
 
-# Misc
+## New Relic ##
+newrelic.js
+
+## Misc ##
 .DS_Store
