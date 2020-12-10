@@ -31,7 +31,7 @@ database/csv
 import_*
 
 ## New Relic ##
-newrelic.js
+newrelic*
 
 ## Misc ##
 .DS_Store
