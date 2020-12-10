@@ -19,7 +19,8 @@
     "genPG": "node database/pg/generatePG.js",
     "genCass": "node database/cass/generateCass.js",
     "seedPG": "psql checkout < database/pg/schema.sql",
-    "seedCass": "cqlsh -f database/cass/schema.cql"
+    "seedCass": "cqlsh -f database/cass/schema.cql",
+    "stress": "k6 run tests/http_get.js"
   },
   "dependencies": {
     "axios": "^0.21.0",
