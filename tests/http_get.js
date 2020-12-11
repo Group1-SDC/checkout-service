@@ -4,16 +4,13 @@ import { sleep } from 'k6';
 import { Rate } from 'k6/metrics';
 
 export const options = {
-  scenarios: {
-    constant_request_rate: {
-      executor: 'constant-arrival-rate',
-      rate: 1000,
-      timeUnit: '1s',
-      duration: '60s',
-      preAllocatedVUs: 20,
-      maxVUs: 2000,
-    },
-  },
+  stages: [
+    { duration: '2m', target: 1 },
+    { duration: '2m', target: 10 },
+    { duration: '2m', target: 100 },
+    { duration: '2m', target: 500 },
+    { duration: '2m', target: 1000 },
+  ],
   ext: {
     loadimpact: {
       distribution: {
@@ -26,7 +23,8 @@ export const options = {
 const errorRate = new Rate('error_rate');
 
 export default function () {
-  const res = http.get('http://localhost:3000/1');
+  const id = Math.floor(Math.random() * 10000000 + 1);
+  const res = http.get(`http://localhost:3000/${id}`);
   errorRate.add(res.error_code);
   sleep(1);
 }
