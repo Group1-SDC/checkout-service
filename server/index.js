@@ -1,10 +1,17 @@
 require('newrelic');
-/* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
+const path = require('path');
 const checkout = require('../database/index.js');
 
 const app = express();
 const PORT = 3000;
+
+app.use('/', express.static('public'));
+
+// Loader.io verification
+app.get('/loaderio-d65024cc698be357259a8328ae84ca06.txt', (req, res) => {
+  res.send('loaderio-d65024cc698be357259a8328ae84ca06');
+});
 
 app.use('/:id', express.static('public'));
 
