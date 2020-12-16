@@ -14,12 +14,14 @@ public/bundle.js
 .eslintrc.js
 
 ## Key Files ##
+database/login.js
 *.pem
 
 ## Instruction files ##
 mongoDb.txt
 nodeInstall.txt
-login.sh
+dblogin.sh
+servlogin.sh
 
 ## Database Config ##
 config.js
@@ -32,6 +34,9 @@ import_*
 
 ## New Relic ##
 newrelic*
+
+## Loader.io ##
+loader*
 
 ## Misc ##
 .DS_Store
