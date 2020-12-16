@@ -1,2 +1,30 @@
+## NPM ##
 node_modules
 npm-debug.log
+
+## Jest ##
+coverage/
+
+## Yarn ##
+yarn-error.log
+
+## Webpack bundle ##
+public/bundle.js
+
+## config ##
+.eslintrc.js
+
+## Key Files ##
+*.pem
+
+## Instruction files ##
+mongoDb.txt
+nodeInstall.txt
+dblogin.sh
+servlogin.sh
+
+## Database Config ##
+config.js
+
+## Misc ##
+.DS_Store

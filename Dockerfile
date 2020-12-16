@@ -8,7 +8,7 @@ RUN mkdir -p /checkout-service
 WORKDIR /checkout-service
 
 # What source code do you want to copy, and where to put it?
-COPY . /checkout-service
+COPY . .
 
 # Does your app have any dependencies that should be installed?
 RUN npm install
