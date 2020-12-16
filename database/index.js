@@ -2,7 +2,11 @@
 const { Pool } = require('pg');
 
 const checkout = new Pool({
+  user: 'postgres',
+  host: process.env.HOST,
   database: 'checkout',
+  password: process.env.PASSWORD,
+  port: 5432,
 });
 
 module.exports = checkout;

@@ -12,7 +12,7 @@
   "author": "Logan Rosenlund <loganrosenlund61@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server/index.js ",
+    "start": "webpack && node server/index.js ",
     "test": "jest --coverage",
     "build": "webpack -w",
     "seed": "node seed.js",
