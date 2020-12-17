@@ -1,6 +1,5 @@
 require('newrelic');
 const express = require('express');
-const path = require('path');
 const checkout = require('../database/index.js');
 
 const app = express();
