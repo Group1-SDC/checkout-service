@@ -15,13 +15,14 @@ public/bundle.js
 
 ## Key Files ##
 database/login.js
-*.pem
+pem
 
 ## Instruction files ##
 mongoDb.txt
 nodeInstall.txt
 dblogin.sh
 servlogin.sh
+nginxlogin.sh
 
 ## Database Config ##
 config.js
