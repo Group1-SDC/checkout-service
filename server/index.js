@@ -8,8 +8,8 @@ const PORT = 3000;
 app.use('/', express.static('public'));
 
 // Loader.io verification
-app.get('/loaderio-d65024cc698be357259a8328ae84ca06.txt', (req, res) => {
-  res.send('loaderio-d65024cc698be357259a8328ae84ca06');
+app.get('/loaderio-8dc40542d4d7911b12b34333fdc4b910.txt', (req, res) => {
+  res.send('loaderio-8dc40542d4d7911b12b34333fdc4b910');
 });
 
 app.use('/:id', express.static('public'));

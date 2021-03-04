@@ -20,9 +20,7 @@ pem
 ## Instruction files ##
 mongoDb.txt
 nodeInstall.txt
-dblogin.sh
-servlogin.sh
-nginxlogin.sh
+*.sh
 
 ## Database Config ##
 config.js
@@ -35,9 +33,6 @@ import_*
 
 ## New Relic ##
 newrelic*
-
-## Loader.io ##
-loader*
 
 ## Misc ##
 .DS_Store
